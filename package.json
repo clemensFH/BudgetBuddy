@@ -2,11 +2,12 @@
   "name": "budgetbuddy",
   "version": "0.1.0",
   "private": true,
-  "main": "public/main.js",
+  "main": "src/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "cross-env": "^7.0.3",
     "electron": "^28.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "electron ."
+    "dev": "concurrently -k \"cross-env BROWSER=none npm start\" \"npm run electron:start",
+    "electron:build": "",
+    "electron:start": "electron ."
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0"
   }
 }

@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles.css';
+import Navbar from '../src/components/Navbar.jsx'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Navbar />
         <h1>BudgetBuddy Lets´s go SIIIUUUUU</h1>
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
