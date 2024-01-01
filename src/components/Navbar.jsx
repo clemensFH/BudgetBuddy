@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Navbar = () => {
     return (
-        <h2>test</h2>
+        <h2 className='text-center'>Navbar</h2>
     )
 }
 
